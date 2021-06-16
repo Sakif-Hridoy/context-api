@@ -1,13 +1,12 @@
-import React, { useContext } from 'react';
-import { CategoryContext } from '../../App';
+import React from 'react';
+
 
 const CategoryDetail = (props) => {
-    const message = useContext(CategoryContext);
-    const {count} = props;
+    const {name} = props.product;
     return (
         <div>
-            <h4>This is your CategoryDetail:{count}</h4>
-            <p>This is the message from app js to direct CategoryDetail------{message}</p>
+            <h4>This is your CategoryDetail:{name}</h4>
+           
             
         </div>
     );

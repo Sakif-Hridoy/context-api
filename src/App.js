@@ -5,12 +5,13 @@ import Home from './Component/Home/Home';
 import Shipment from './Component/Shipment/Shipment';
 export const CategoryContext = createContext();
 function App() {
-  const [count,setCount] = useState(0);
+  // const [count,setCount] = useState(0);
+  const [category,setCategory] = useState("Laptop");
   return (
-    <CategoryContext.Provider value="Did IT">
-      <h4>App js count:{count}</h4>
-     <Header count={count} setCount={setCount}></Header>
-     <Home count={count}></Home>
+    <CategoryContext.Provider value={[category,setCategory]}>
+    <h4>App js category:{category}</h4>
+     <Header></Header>
+     <Home></Home>
      <Shipment></Shipment>
     </CategoryContext.Provider>
   );
